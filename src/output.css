@@ -558,32 +558,20 @@ video {
   margin: 0px;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .w-full {
   width: 100%;
 }
 
-.bg-\[ur\(\'\.\/img\/background\.jpeg\'\)\] {
-  background-color: ur('./img/background.jpeg');
+.w-screen {
+  width: 100vw;
 }
 
-.bg-\[url\(\'\.\/img\/background\.jpeg\'\)\] {
-  background-image: url('./img/background.jpeg');
-}
-
-.bg-\[url\(\'\/img\/background\.jpeg\'\)\] {
-  background-image: url('/img/background.jpeg');
-}
-
-.bg-\[url\(\'\/img\/ba\.jpeg\'\)\] {
-  background-image: url('/img/ba.jpeg');
-}
-
-.bg-\[url\(\'\/img\/bground\.jpg\'\)\] {
-  background-image: url('/img/bground.jpg');
-}
-
-.bg-\[url\(\'\/img\/background\.jpg\'\)\] {
-  background-image: url('/img/background.jpg');
+.bg-\[url\(\'\/img\/bg\.jpeg\'\)\] {
+  background-image: url('/img/bg.jpeg');
 }
 
 .bg-cover {
@@ -600,9 +588,4 @@ video {
 
 .p-0 {
   padding: 0px;
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
