@@ -562,12 +562,8 @@ video {
   height: 100vh;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-screen {
-  width: 100vw;
+.w-auto {
+  width: auto;
 }
 
 .bg-\[url\(\'\/img\/bg\.jpeg\'\)\] {
@@ -576,10 +572,6 @@ video {
 
 .bg-cover {
   background-size: cover;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .bg-no-repeat {
