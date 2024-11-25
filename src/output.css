@@ -591,20 +591,12 @@ video {
   margin-left: 1rem;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-3 {
   margin-top: 0.75rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .mt-6 {
@@ -874,11 +866,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .font-bold {
