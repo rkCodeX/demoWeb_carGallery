@@ -582,16 +582,16 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
 
 .ml-20 {
   margin-left: 5rem;
-}
-
-.ml-24 {
-  margin-left: 6rem;
 }
 
 .ml-4 {
@@ -718,10 +718,6 @@ video {
   width: 100%;
 }
 
-.w-44 {
-  width: 11rem;
-}
-
 .min-w-full {
   min-width: 100%;
 }
@@ -770,8 +766,8 @@ video {
   justify-content: space-evenly;
 }
 
-.gap-14 {
-  gap: 3.5rem;
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-2 {
@@ -790,12 +786,12 @@ video {
   gap: 1.5rem;
 }
 
-.gap-8 {
-  gap: 2rem;
+.gap-7 {
+  gap: 1.75rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
+.gap-8 {
+  gap: 2rem;
 }
 
 .text-wrap {
@@ -822,6 +818,11 @@ video {
   border-width: 2px;
 }
 
+.border-x-2 {
+  border-left-width: 2px;
+  border-right-width: 2px;
+}
+
 .border-x-4 {
   border-left-width: 4px;
   border-right-width: 4px;
@@ -843,6 +844,12 @@ video {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.border-x-gray-300 {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(209 213 219 / var(--tw-border-opacity));
+  border-right-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
 .border-x-gray-500 {
@@ -952,11 +959,6 @@ video {
   padding-right: 1.5rem;
 }
 
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-}
-
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -986,20 +988,12 @@ video {
   padding-left: 2.5rem;
 }
 
-.pl-2 {
-  padding-left: 0.5rem;
+.pl-8 {
+  padding-left: 2rem;
 }
 
 .pt-1 {
   padding-top: 0.25rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
-}
-
-.pl-8 {
-  padding-left: 2rem;
 }
 
 .text-center {
@@ -1211,5 +1205,37 @@ video {
 
   .max-lg\:w-screen {
     width: 100vw;
+  }
+}
+
+@media not all and (min-width: 640px) {
+  .max-sm\:ml-6 {
+    margin-left: 1.5rem;
+  }
+
+  .max-sm\:block {
+    display: block;
+  }
+
+  .max-sm\:w-screen {
+    width: 100vw;
+  }
+
+  .max-sm\:w-96 {
+    width: 24rem;
+  }
+
+  .max-sm\:w-64 {
+    width: 16rem;
+  }
+
+  .max-sm\:w-80 {
+    width: 20rem;
+  }
+
+  .max-sm\:border-x-blue0 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(0 0 17 / var(--tw-border-opacity));
+    border-right-color: rgb(0 0 17 / var(--tw-border-opacity));
   }
 }
