@@ -172,3 +172,18 @@ cars.forEach((car) =>{
 });
 
 document.querySelector(".cars").innerHTML = carsHTML;
+
+let view = false;
+let box = document.querySelector(".drop");
+let Nav = document.querySelector(".btn");
+Nav.addEventListener('click',()=>{
+   if(view){
+       view = false;
+       Nav.innerHTML = `<i class="fas fa-bars fa-2xl" style="line-height: 1; color: #dedede;"></i>`
+       box.style.display = "none";
+   }else{
+       view = true;
+       Nav.innerHTML = `<i class="fa-solid fa-xmark fa-2xl" style="color: #dedede;"></i>`;
+       box.style.display = "block";
+   }
+});
