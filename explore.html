@@ -11,7 +11,7 @@
 
 <body class="bg-blue0">
     <div class="flex flex-row">
-        <div class="w-2/12 h-screen bg-blue0">
+        <div class="w-2/12 h-screen bg-blue0 max-xl:hidden">
             <h1 class="text-center bg-black py-4 text-4xl text-gold0"><a href="car.html">carlax</a></h1>
             <div
                 class="hover:bg-black hover:text-gray-300 hover:shadow hover:shadow-gold0 rounded-md cursor-pointer flex flex-row items-center justify-start pl-10 py-4">
@@ -51,7 +51,7 @@
 
         </div>
 
-        <div class="flex flex-col w-10/12">
+        <div class="flex flex-col max-xl:w-screen w-10/12">
 
             <div class="bg-gray-600 h-24 px-2 py-4 flex items-center justify-center max-xl:hidden">
                 <span class="flex-1">
@@ -107,7 +107,8 @@
                         src="./img/Mercedes" alt="">
                 </span>
             </div>
-            <div class="cars flex flex-row flex-wrap"></div>
+            <div class="cars flex flex-row flex-wrap max-lg:grid max-lg:grid-cols-1">
+            </div>
         </div>
     </div>
     <script src="explore.js"></script>

@@ -150,14 +150,14 @@ let carsHTML = "";
 
 cars.forEach((car) =>{
     carsHTML += `
-     <div class="w-1/2 h-72 flex flex-row border-2 border-blue0 rounded-md mb-1 shadow-md shadow-white">
-                    <img class="w-56 h-70 rounded-md" src="${car.image}" alt="">
+     <div class="w-1/2 max-lg:w-full h-72 max-sm:h-auto flex flex-row max-sm:flex-col border-2 border-blue0 rounded-md mb-1 shadow-md shadow-white">
+                    <img class="w-56 max-sm:w-screen h-70 rounded-md" src="${car.image}" alt="">
                     <div class="px-4 flex flex-col justify-between bg-gray-200">
                         <div>
                             <h2 class="font-bold text-2xl text-gray-800 mt-4 mb-2">${car.name} ${car.color}</h2>
                             <p class="text-md mb-2 font-bold text-gray-700 text-wrap">${car.model} ${car.year}</p>
-                            <p class="text-md text-gray-700 text-wrap">${car.description}</p>
-                            <h3 class="text-lg mt-2 text-gray-800 font-semibold">$${car.price}</h3>
+                            <p class="text-md text-gray-700 text-justify text-wrap">${car.description}</p>
+                            <h3 class="text-lg mt-2 max-sm:mb-4 text-gray-800 font-semibold">$${car.price}</h3>
                         </div>
                         <div class="flex flex-row mb-4 items-center justify-between">
                             <span class="cursor-pointer">
