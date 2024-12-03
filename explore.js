@@ -211,7 +211,7 @@ let saveItems = [];
 document.querySelectorAll(".saveBtn").forEach(btn => {
    btn.addEventListener('click', () =>{
       let saveItem = btn.dataset.saved;
-
+      let number = 0;
       let save = false;
       saveItems.forEach((item)=>{
          if(item.carId === saveItem){
@@ -232,6 +232,11 @@ document.querySelectorAll(".saveBtn").forEach(btn => {
          });
       }
 
+      saveItems.forEach(() => {
+         number++;
+      })
+   
+      console.log(number);
       console.log(saveItems);
    });
 });
