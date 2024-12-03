@@ -179,7 +179,7 @@ cars.forEach((car) =>{
                             <h3 class="text-lg mt-2 max-sm:mb-4 text-gray-800 font-semibold">$${car.price}</h3>
                         </div>
                         <div class="flex flex-row mb-4 items-center justify-between">
-                            <span class="saveBtn cursor-pointer">
+                            <span class="saveBtn cursor-pointer" data-saved="${car.id}">
                                 <i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>
                             </span>
                             <span class="cursor-pointer">
@@ -207,9 +207,32 @@ Nav.addEventListener('click',()=>{
    }
 });
 
+let saveItems = [];
 document.querySelectorAll(".saveBtn").forEach(btn => {
    btn.addEventListener('click', () =>{
-      btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
-      console.log('saved');
+      let saveItem = btn.dataset.saved;
+
+      let save = false;
+      saveItems.forEach((item)=>{
+         if(item.carId === saveItem){
+            save = true;
+         }
+      });
+
+      if(save){
+         btn.innerHTML = `<i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>`;
+         saveItems = saveItems.filter((item)=>{
+            return item.carId!== saveItem;
+         });
+      }else{
+         btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
+         saveItems.push({
+            carId: saveItem,
+            saved: true
+         });
+      }
+
+      console.log(saveItems);
    });
 });
+
