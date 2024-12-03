@@ -207,7 +207,7 @@ Nav.addEventListener('click',()=>{
    }
 });
 
-let saveItems = [];
+export let saveItems = [];
 document.querySelectorAll(".saveBtn").forEach(btn => {
    btn.addEventListener('click', () =>{
       let saveItem = btn.dataset.saved;
@@ -228,7 +228,7 @@ document.querySelectorAll(".saveBtn").forEach(btn => {
          btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
          saveItems.push({
             carId: saveItem,
-            saved: true
+            saved: number
          });
       }
 
@@ -236,8 +236,6 @@ document.querySelectorAll(".saveBtn").forEach(btn => {
          number++;
       })
    
-      console.log(number);
-      console.log(saveItems);
    });
 });
 
