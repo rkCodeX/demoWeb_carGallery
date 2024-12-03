@@ -166,7 +166,6 @@ let cars = [
 
 
 let carsHTML = "";
-
 cars.forEach((car) =>{
     carsHTML += `
      <div class="w-1/2 max-lg:w-full h-72 max-sm:h-auto flex flex-row max-sm:flex-col border-2 border-blue0 rounded-md mb-1 shadow-md shadow-white">
@@ -189,7 +188,6 @@ cars.forEach((car) =>{
                     </div>
                 </div>`
 });
-
 document.querySelector(".cars").innerHTML = carsHTML;
 
 let view = false;
@@ -207,7 +205,7 @@ Nav.addEventListener('click',()=>{
    }
 });
 
-export let saveItems = [];
+let saveItems = [];
 document.querySelectorAll(".saveBtn").forEach(btn => {
    btn.addEventListener('click', () =>{
       let saveItem = btn.dataset.saved;
@@ -238,4 +236,3 @@ document.querySelectorAll(".saveBtn").forEach(btn => {
    
    });
 });
-

@@ -1,5 +1,5 @@
 let slide = document.getElementsByClassName("slides");
-slideIndex = 0;
+let slideIndex = 0;
 slides();
 function slides(){
     for(let i = 0; i < slide.length; i++){
