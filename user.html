@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rk profile</title>
+    <title>profile</title>
     <link rel="stylesheet" href="./src/output.css">
     <script src="https://kit.fontawesome.com/324d50e246.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-blue0">
+<body class="bg-blue0 flex items-center justify-center font-medium font-mono">
     <div class="rounded-md text-blue0 bg-gray-200 px-10 py-8 m-24 w-96 flex flex-col gap-4 h-auto">
         <h2 class="pl-2 text-xl border-b-2 border-b-blue0 bg-gray-300">User</h2>
         <h2 class="pl-2 text-xl border-b-2 border-b-blue0 bg-gray-300">Email address</h2>
         <h2 class="pl-2 text-xl border-b-2 border-b-blue0 bg-gray-300">Phone Number</h2>
     <div>
-        <h2 class="pl-2 text-xl border-b-2 border-b-blue0 bg-gray-300">Your orders</h2>
+        <h2 class="pl-2 text-xl border-b-2 border-b-blue0 bg-gray-300">Your orders <span class="cursor-pointer">0</span></h2>
         <ul class="ml-2">
         <li class="text-sm text-red-700">Sorry! No order found yet</li>
         </ul>
     </div>
     <div>
-        <h2 class="text-xl pl-2 border-b-2 border-b-blue0 bg-gray-300">Saves</h2>
+        <h2 class="text-xl pl-2 border-b-2 border-b-blue0 bg-gray-300">Saved <span class="cursor-pointer">0</span></h2>
         <div class="ml-2 text-sm text-red-700">Nothing is saved yet</div>
     </div>
        <button class="px-6 py-2 text-gray-200 bg-blue0 text-lg rounded-md border-2 border-gray-200 hover:bg-red-700">Delete account</button>

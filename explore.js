@@ -1,5 +1,6 @@
 let cars = [
    {
+      id:'01',
       name: 'Car 1',
       color: 'black',
       model: 'Model 1',
@@ -8,6 +9,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 15000
    },{
+      id:'02',
      name: 'Car 2',
       color: 'white',
       model: 'Model 2',
@@ -16,6 +18,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 20000
    },{
+      id:'03',
      name: 'Car 3',
       color: 'blue',
       model: 'Model 3',
@@ -24,6 +27,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 25000
    },{
+      id:'04',
      name: 'Car 4',
       color: 'red',
       model: 'Model 4',
@@ -32,6 +36,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 30000
    },{
+      id:'05',
      name: 'Car 5',
       color: 'green',
       model: 'Model 5',
@@ -40,6 +45,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 35000
    },{
+      id:'06',
      name: 'Car 6',
       color: 'yellow',
       model: 'Model 6',
@@ -48,6 +54,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 40000
    },{
+      id:'07',
      name: 'Car 7',
       color: 'orange',
       model: 'Model 7',
@@ -56,6 +63,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 45000
    },{
+      id:'08',
      name: 'Car 8',
       color: 'purple',
       model: 'Model 8',
@@ -64,6 +72,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 50000
    },{
+      id:'09',
      name: 'Car 9',
       color: 'pink',
       model: 'Model 9',
@@ -72,6 +81,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 55000
    },{
+      id:'10',
      name: 'Car 10',
       color: 'gray',
       model: 'Model 10',
@@ -80,6 +90,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 60000
    },{
+      id:'11',
      name: 'Car 11',
       color: 'brown',
       model: 'Model 11',
@@ -88,6 +99,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 65000
    },{
+      id:'12',
      name: 'Car 12',
       color: 'cyan',
       model: 'Model 12',
@@ -96,6 +108,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 70000
    },{
+      id:'13',
      name: 'Car 13',
       color: 'magenta',
       model: 'Model 13',
@@ -104,6 +117,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 75000
    },{
+      id:'14',
      name: 'Car 14',
       color: 'lime',
       model: 'Model 14',
@@ -112,6 +126,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 80000
    },{
+      id:'15',
      name: 'Car 15',
       color: 'teal',
       model: 'Model 15',
@@ -120,6 +135,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 85000
    },{
+      id:'16',
      name: 'Car 16',
       color: 'navy',
       model: 'Model 16',
@@ -128,6 +144,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 90000
    },{
+      id:'17',
      name: 'Car 17',
       color: 'maroon',
       model: 'Model 17',
@@ -136,6 +153,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 95000
    },{
+      id:'18',
      name: 'Car 18',
       color: 'olive',
       model: 'Model 18',
@@ -145,6 +163,7 @@ let cars = [
       price: 100000
    }
 ];
+
 
 let carsHTML = "";
 
@@ -160,7 +179,7 @@ cars.forEach((car) =>{
                             <h3 class="text-lg mt-2 max-sm:mb-4 text-gray-800 font-semibold">$${car.price}</h3>
                         </div>
                         <div class="flex flex-row mb-4 items-center justify-between">
-                            <span class="cursor-pointer">
+                            <span class="saveBtn cursor-pointer">
                                 <i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>
                             </span>
                             <span class="cursor-pointer">
@@ -186,4 +205,11 @@ Nav.addEventListener('click',()=>{
        Nav.innerHTML = `<i class="fa-solid fa-xmark fa-2xl" style="color: #dedede;"></i>`;
        box.style.display = "block";
    }
+});
+
+document.querySelectorAll(".saveBtn").forEach(btn => {
+   btn.addEventListener('click', () =>{
+      btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
+      console.log('saved');
+   });
 });
