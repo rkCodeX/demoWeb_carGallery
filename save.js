@@ -1,69 +1,8 @@
-let cart = [
-    {
-      id:'01',
-      name: 'Car 1',
-      color: 'black',
-      model: 'Model 1',
-      year: 2021,
-      price: 2000,
-      image: './img/car1.jpg',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.'
-    },
-    {
-      id:'02',
-      name: 'Car 2',
-      color: 'black',
-      model: 'Model 2',
-      year: 2021,
-      price: 7000,
-      image: './img/car2.jpg',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.'
-    },
-    {
-        id:'03',
-        name: 'Car 2',
-        color: 'black',
-        model: 'Model 2',
-        year: 2021,
-        price: 7000,
-        image: './img/car3.jpg',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.'
-    },
-    {
-        id:'03',
-        name: 'Car 2',
-        color: 'black',
-        model: 'Model 2',
-        year: 2021,
-        price: 7000,
-        image: './img/car4.jpg',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.'
-    },
-    {
-        id:'04',
-        name: 'Car 2',
-        color: 'black',
-        model: 'Model 2',
-        year: 2021,
-        price: 7000,
-        image: './img/car5.jpg',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.'
-    },
-    {
-        id:'05',
-        name: 'Car 2',
-        color: 'black',
-        model: 'Model 2',
-        year: 2021,
-        price: 7000,
-        image: './img/car6.jpg',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.'
-    }
-];
+import { saveItems, number } from '/explore.js'
 
 let cartHtml = '';
 
-cart.forEach((car) => {
+saveItems.forEach((car) => {
     cartHtml += `
     <div class="bg-gray-300 w-1/2 border-2 border-black rounded-md flex flex-row shadow-md shadow-gray-300">
         <img class="w-2/4 rounded-md" src="${car.image}" alt="">
