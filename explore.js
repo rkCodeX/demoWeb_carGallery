@@ -179,7 +179,6 @@ cars.forEach((car) => {
                         </div>
                         <div class="flex flex-row mb-4 items-center justify-between">
                             <span class="saveBtn cursor-pointer" data-saved="${car.id}">
-                                <i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>
                             </span>
                             <span class="cursor-pointer">
                                 <i class="fa-solid fa-truck fa-xl" style="color: #000000;"></i>
@@ -188,7 +187,17 @@ cars.forEach((car) => {
                     </div>
                 </div>`
 });
-document.querySelector(".cars").innerHTML = carsHTML;
+function saveCar(){
+   localStorage.setItem('carhtml', carsHTML);
+}
+
+function viewCar(){
+   explore.innerHTML = localStorage.getItem('carhtml');
+}
+
+let explore =  document.querySelector(".cars");
+viewCar()
+
 
 let view = false;
 let box = document.querySelector(".drop");
@@ -207,6 +216,8 @@ Nav.addEventListener('click', () => {
 
 export let number = 0;
 export let saveItems = [];
+
+
 document.querySelectorAll(".saveBtn").forEach(btn => {
    btn.addEventListener('click', () => {
       let saveItem = btn.dataset.saved;
@@ -219,11 +230,13 @@ document.querySelectorAll(".saveBtn").forEach(btn => {
 
       if (save) {
          btn.innerHTML = `<i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>`;
+         saveCar()
          saveItems = saveItems.filter((item) => {
             return item.carId !== saveItem;
-         });
-      } else {
+         }); 
+      }else {
          btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
+         saveCar()
          const car = cars.find(c => c.id === saveItem);
          const carDetails = {
             carId: car.id,
@@ -235,12 +248,9 @@ document.querySelectorAll(".saveBtn").forEach(btn => {
             carDescription: car.description,
             carPrice: car.price
          };
-
          saveItems.push(carDetails);
       }
-
-      saveItems.forEach(() => {
-      number++;
-      })
+         number = saveItems.length;
    });
 });
+

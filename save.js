@@ -1,6 +1,9 @@
 import { saveItems, number } from '/explore.js'
 
-let cartHtml = '';
+let cartHtml = ''; 
+
+
+
 
 saveItems.forEach((car) => {
     cartHtml += `
@@ -16,5 +19,6 @@ saveItems.forEach((car) => {
         </div> 
     </div>`;
 });
+
 
 document.querySelector(".saveCart").innerHTML = cartHtml;
