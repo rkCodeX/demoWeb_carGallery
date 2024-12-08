@@ -165,7 +165,7 @@ let cars = [
 ];
 
 
-let carsHTML = "";
+let carsHTML = [];
 cars.forEach((car) => {
    carsHTML += `
      <div class="container w-1/2 max-lg:w-full h-72 max-sm:h-auto flex flex-row max-sm:flex-col border-2 border-blue0 rounded-md mb-1 shadow-md shadow-white">
@@ -187,21 +187,14 @@ cars.forEach((car) => {
                     </div>
                 </div>`
 });
-function saveCar(){
-   localStorage.setItem('carhtml', carsHTML);
-}
 
-function viewCar(){
-   explore.innerHTML = localStorage.getItem('carhtml');
-}
-
-let explore =  document.querySelector(".cars");
-viewCar()
+document.querySelector(".cars").innerHTML = carsHTML;
 
 
 let view = false;
 let box = document.querySelector(".drop");
 let Nav = document.querySelector(".btn");
+
 Nav.addEventListener('click', () => {
    if (view) {
       view = false;
@@ -215,10 +208,12 @@ Nav.addEventListener('click', () => {
 });
 
 export let number = 0;
-export let saveItems = [];
+let saveItems = [];
+
 
 
 document.querySelectorAll(".saveBtn").forEach(btn => {
+   btn.innerHTML = `<i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>`;
    btn.addEventListener('click', () => {
       let saveItem = btn.dataset.saved;
       let save = false;
@@ -230,13 +225,11 @@ document.querySelectorAll(".saveBtn").forEach(btn => {
 
       if (save) {
          btn.innerHTML = `<i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>`;
-         saveCar()
          saveItems = saveItems.filter((item) => {
             return item.carId !== saveItem;
          }); 
       }else {
          btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
-         saveCar()
          const car = cars.find(c => c.id === saveItem);
          const carDetails = {
             carId: car.id,
@@ -251,6 +244,7 @@ document.querySelectorAll(".saveBtn").forEach(btn => {
          saveItems.push(carDetails);
       }
          number = saveItems.length;
+         localStorage.setItem('savedItems', JSON.stringify(saveItems));
+         console.log(JSON.parse(localStorage.getItem('savedItems')));
    });
 });
-
