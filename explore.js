@@ -1,5 +1,6 @@
-let cars = [
+export let cars = [
    {
+      status: 'false',
       id: '01',
       name: 'Car 1',
       color: 'black',
@@ -9,6 +10,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 15000
    }, {
+      status: 'false',
       id: '02',
       name: 'Car 2',
       color: 'white',
@@ -18,6 +20,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 20000
    }, {
+      status: 'false',
       id: '03',
       name: 'Car 3',
       color: 'blue',
@@ -27,6 +30,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 25000
    }, {
+      status: 'false',
       id: '04',
       name: 'Car 4',
       color: 'red',
@@ -36,6 +40,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 30000
    }, {
+      status: 'false',
       id: '05',
       name: 'Car 5',
       color: 'green',
@@ -45,6 +50,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 35000
    }, {
+      status: 'false',
       id: '06',
       name: 'Car 6',
       color: 'yellow',
@@ -54,6 +60,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 40000
    }, {
+      status: 'false',
       id: '07',
       name: 'Car 7',
       color: 'orange',
@@ -63,6 +70,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 45000
    }, {
+      status: 'false',
       id: '08',
       name: 'Car 8',
       color: 'purple',
@@ -72,6 +80,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 50000
    }, {
+      status: 'false',
       id: '09',
       name: 'Car 9',
       color: 'pink',
@@ -81,6 +90,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 55000
    }, {
+      status: 'false',
       id: '10',
       name: 'Car 10',
       color: 'gray',
@@ -90,6 +100,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 60000
    }, {
+      status: 'false',
       id: '11',
       name: 'Car 11',
       color: 'brown',
@@ -99,6 +110,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 65000
    }, {
+      status: 'false',
       id: '12',
       name: 'Car 12',
       color: 'cyan',
@@ -108,6 +120,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 70000
    }, {
+      status: 'false',
       id: '13',
       name: 'Car 13',
       color: 'magenta',
@@ -117,6 +130,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 75000
    }, {
+      status: 'false',
       id: '14',
       name: 'Car 14',
       color: 'lime',
@@ -126,6 +140,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 80000
    }, {
+      status: 'false',
       id: '15',
       name: 'Car 15',
       color: 'teal',
@@ -135,6 +150,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 85000
    }, {
+      status: 'false',
       id: '16',
       name: 'Car 16',
       color: 'navy',
@@ -144,6 +160,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 90000
    }, {
+      status: 'false',
       id: '17',
       name: 'Car 17',
       color: 'maroon',
@@ -153,6 +170,7 @@ let cars = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel consectetur convallis, metus ex vulputate ex, at aliquet velit nunc ac eros.',
       price: 95000
    }, {
+      status: 'false',
       id: '18',
       name: 'Car 18',
       color: 'olive',
@@ -163,7 +181,6 @@ let cars = [
       price: 100000
    }
 ];
-
 
 let carsHTML = [];
 cars.forEach((car) => {
@@ -178,7 +195,8 @@ cars.forEach((car) => {
                             <h3 class="text-lg mt-2 max-sm:mb-4 text-gray-800 font-semibold">$${car.price}</h3>
                         </div>
                         <div class="flex flex-row mb-4 items-center justify-between">
-                            <span class="saveBtn cursor-pointer" data-saved="${car.id}">
+                            <span class="saveBtn cursor-pointer" data-saved="${car.status}">
+                                 <i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>
                             </span>
                             <span class="cursor-pointer">
                                 <i class="fa-solid fa-truck fa-xl" style="color: #000000;"></i>
@@ -189,7 +207,6 @@ cars.forEach((car) => {
 });
 
 document.querySelector(".cars").innerHTML = carsHTML;
-
 
 let view = false;
 let box = document.querySelector(".drop");
@@ -207,44 +224,9 @@ Nav.addEventListener('click', () => {
    }
 });
 
-export let number = 0;
-let saveItems = [];
-
-
-
-document.querySelectorAll(".saveBtn").forEach(btn => {
-   btn.innerHTML = `<i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>`;
-   btn.addEventListener('click', () => {
-      let saveItem = btn.dataset.saved;
-      let save = false;
-      saveItems.forEach((item) => {
-         if (item.carId === saveItem) {
-            save = true;
-         }
-      });
-
-      if (save) {
-         btn.innerHTML = `<i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>`;
-         saveItems = saveItems.filter((item) => {
-            return item.carId !== saveItem;
-         }); 
-      }else {
-         btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
-         const car = cars.find(c => c.id === saveItem);
-         const carDetails = {
-            carId: car.id,
-            carImg: car.image,
-            carName: car.name,
-            carColor: car.color,
-            carModel: car.model,
-            carYear: car.year,
-            carDescription: car.description,
-            carPrice: car.price
-         };
-         saveItems.push(carDetails);
-      }
-         number = saveItems.length;
-         localStorage.setItem('savedItems', JSON.stringify(saveItems));
-         console.log(JSON.parse(localStorage.getItem('savedItems')));
-   });
+document.querySelectorAll('.saveBtn').forEach((btn) => {
+   btn.addEventListener('click', function(){
+      btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
+      btn.dataset.saved = 'true';
+   })
 });
