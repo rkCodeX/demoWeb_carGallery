@@ -182,9 +182,9 @@ export let cars = [
    }
 ];
 
-let carsHTML = [];
+let carsHtml = [];
 cars.forEach((car) => {
-   carsHTML += `
+   carsHtml += `
      <div class="container w-1/2 max-lg:w-full h-72 max-sm:h-auto flex flex-row max-sm:flex-col border-2 border-blue0 rounded-md mb-1 shadow-md shadow-white">
                     <img class="w-56 max-sm:w-screen h-70 rounded-md" src="${car.image}" alt="">
                     <div class="px-4 flex flex-col justify-between bg-gray-200">
@@ -195,7 +195,7 @@ cars.forEach((car) => {
                             <h3 class="text-lg mt-2 max-sm:mb-4 text-gray-800 font-semibold">$${car.price}</h3>
                         </div>
                         <div class="flex flex-row mb-4 items-center justify-between">
-                            <span class="saveBtn cursor-pointer" data-saved="${car.status}">
+                            <span class="saveBtn cursor-pointer" data-saved="${car.id}">
                                  <i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>
                             </span>
                             <span class="cursor-pointer">
@@ -206,27 +206,34 @@ cars.forEach((car) => {
                 </div>`
 });
 
-document.querySelector(".cars").innerHTML = carsHTML;
+document.querySelector(".cars").innerHTML = carsHtml;
 
-let view = false;
-let box = document.querySelector(".drop");
-let Nav = document.querySelector(".btn");
 
-Nav.addEventListener('click', () => {
-   if (view) {
-      view = false;
-      Nav.innerHTML = `<i class="fas fa-bars fa-2xl" style="line-height: 1; color: #dedede;"></i>`
-      box.style.display = "none";
-   } else {
-      view = true;
-      Nav.innerHTML = `<i class="fa-solid fa-xmark fa-2xl" style="color: #dedede;"></i>`;
-      box.style.display = "block";
+// let view = false;
+// let box = document.querySelector(".drop");
+// let Nav = document.querySelector(".btn");
+
+// Nav.addEventListener('click', () => {
+//    if (view) {
+//       view = false;
+//       Nav.innerHTML = `<i class="fas fa-bars fa-2xl" style="line-height: 1; color: #dedede;"></i>`
+//       box.style.display = "none";
+//    } else {
+//       view = true;
+//       Nav.innerHTML = `<i class="fa-solid fa-xmark fa-2xl" style="color: #dedede;"></i>`;
+//       box.style.display = "block";
+//    }
+// });
+
+document.querySelector(".cars").addEventListener('click', function(event) {
+   if (event.target.closest('.saveBtn')) {
+      const btn = event.target.closest('.saveBtn');
+      const carId = btn.getAttribute('data-saved');
+      const car = cars.find(car => car.id === carId);
+      if (car) {
+         car.status = 'true';
+         btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
+         console.log(cars);
+      }
    }
-});
-
-document.querySelectorAll('.saveBtn').forEach((btn) => {
-   btn.addEventListener('click', function(){
-      btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
-      btn.dataset.saved = 'true';
-   })
 });
