@@ -29,8 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Element with class 'saveCart' not found.");
     }
 
-    console.log(cars);
-
 //     document.querySelectorAll('.removeBtn').forEach((button) => {
 //         button.addEventListener('click', function() {
 //             const carElement = button.closest('.bg-gray-300');

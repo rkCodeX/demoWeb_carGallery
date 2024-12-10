@@ -1,3 +1,21 @@
+let view = false;
+
+function showNav(){
+   let box = document.querySelector(".drop");
+   let Nav = document.querySelector(".btn");
+   if (view) {
+      view = false;
+      Nav.innerHTML = `<i class="fas fa-bars fa-2xl" style="line-height: 1; color: #dedede;"></i>`
+      box.style.display = "none";
+   } else {
+      view = true;
+      Nav.innerHTML = `<i class="fa-solid fa-xmark fa-2xl" style="color: #dedede;"></i>`;
+      box.style.display = "block";
+   }
+}
+
+window.showNav = showNav;
+
 export let cars = [
    {
       status: 'false',
@@ -207,24 +225,6 @@ cars.forEach((car) => {
 });
 
 document.querySelector(".cars").innerHTML = carsHtml;
-
-
-// let view = false;
-// let box = document.querySelector(".drop");
-// let Nav = document.querySelector(".btn");
-
-// Nav.addEventListener('click', () => {
-//    if (view) {
-//       view = false;
-//       Nav.innerHTML = `<i class="fas fa-bars fa-2xl" style="line-height: 1; color: #dedede;"></i>`
-//       box.style.display = "none";
-//    } else {
-//       view = true;
-//       Nav.innerHTML = `<i class="fa-solid fa-xmark fa-2xl" style="color: #dedede;"></i>`;
-//       box.style.display = "block";
-//    }
-// });
-
 document.querySelector(".cars").addEventListener('click', function(event) {
    if (event.target.closest('.saveBtn')) {
       const btn = event.target.closest('.saveBtn');
@@ -233,7 +233,6 @@ document.querySelector(".cars").addEventListener('click', function(event) {
       if (car) {
          car.status = 'true';
          btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
-         console.log(cars);
       }
    }
 });
