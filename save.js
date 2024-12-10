@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`;
         });
     } else {
-        cartHtml = `<p class="text-gray-600">No cars available in the cart.</p>`;
+        cartHtml = `<p class="text-red-700 text-2xl p-20">No cars available in the cart.</p>`;
     }
 
     const saveCartElement = document.querySelector('.saveCart');
@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Element with class 'saveCart' not found.");
     }
 
-//     document.querySelectorAll('.removeBtn').forEach((button) => {
-//         button.addEventListener('click', function() {
-//             const carElement = button.closest('.bg-gray-300');
-//             if (carElement) {
-//                 carElement.remove(); 
-//             }
-//         });
-//     });
+    // document.querySelectorAll('.removeBtn').forEach((button) => {
+    //     button.addEventListener('click', function() {
+    //         const carElement = button.closest('.bg-gray-300');
+    //         if (carElement) {
+    //             carElement.remove();
+    //         }
+    //     });
+    // });
 
 //     document.querySelectorAll('.orderBtn').forEach((button) => {
 //         button.addEventListener('click', function() {
