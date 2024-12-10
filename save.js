@@ -2,9 +2,11 @@ import { cars } from './explore.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     let cartHtml = "";
-
+    let cars = JSON.parse(localStorage.getItem('cars'));
+    console.log(cars);
     if (Array.isArray(cars) && cars.length > 0) {
-        cars.forEach((car) => {
+        let saveCars = cars.filter(car => car.status === 'true');
+        saveCars.forEach((car) => {
             cartHtml += `
             <div class="bg-gray-300 w-1/2 border-2 border-black rounded-md flex flex-row shadow-md shadow-gray-300 mb-4">
                 <img class="w-2/4 rounded-md" src="${car.image}" alt="${car.name}">

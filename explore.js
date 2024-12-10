@@ -233,6 +233,7 @@ document.querySelector(".cars").addEventListener('click', function(event) {
       if (car) {
          car.status = 'true';
          btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
+         localStorage.setItem('cars', JSON.stringify(cars));
       }
    }
 });
