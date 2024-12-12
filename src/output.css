@@ -653,12 +653,12 @@ video {
   margin-left: 1rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
+.ml-96 {
+  margin-left: 24rem;
 }
 
-.mr-56 {
-  margin-right: 14rem;
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .mt-1 {
@@ -683,18 +683,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mr-72 {
-  margin-right: 18rem;
-}
-
-.ml-72 {
-  margin-left: 18rem;
-}
-
-.ml-96 {
-  margin-left: 24rem;
 }
 
 .block {
@@ -1211,6 +1199,11 @@ video {
   color: rgb(227 178 16 / var(--tw-text-opacity));
 }
 
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
@@ -1251,6 +1244,11 @@ video {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .text-red-700 {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
@@ -1259,16 +1257,6 @@ video {
 .text-white0 {
   --tw-text-opacity: 1;
   color: rgb(255 252 252 / var(--tw-text-opacity));
-}
-
-.text-gray-100 {
-  --tw-text-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-text-opacity));
-}
-
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .shadow-md {
@@ -1407,6 +1395,11 @@ video {
 }
 
 @media not all and (min-width: 1024px) {
+  .max-lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .max-lg\:mb-6 {
     margin-bottom: 1.5rem;
   }
@@ -1433,6 +1426,14 @@ video {
 
   .max-lg\:w-screen {
     width: 100vw;
+  }
+
+  .max-lg\:w-9 {
+    width: 2.25rem;
+  }
+
+  .max-lg\:w-1\/2 {
+    width: 50%;
   }
 
   .max-lg\:grid-cols-1 {
@@ -1469,12 +1470,28 @@ video {
     margin-bottom: 1rem;
   }
 
+  .max-sm\:ml-10 {
+    margin-left: 2.5rem;
+  }
+
   .max-sm\:ml-24 {
     margin-left: 6rem;
   }
 
   .max-sm\:ml-28 {
     margin-left: 7rem;
+  }
+
+  .max-sm\:ml-4 {
+    margin-left: 1rem;
+  }
+
+  .max-sm\:ml-1 {
+    margin-left: 0.25rem;
+  }
+
+  .max-sm\:ml-11 {
+    margin-left: 2.75rem;
   }
 
   .max-sm\:h-auto {
