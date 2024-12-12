@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`;
         });
     } else {
-        cartHtml = `<p class="text-red-700 text-2xl p-20">No cars available in the cart.</p>`;
+        cartHtml = `<p class="text-red-600 text-2xl p-20">No cars available in cart.</p>`;
     }
 
     const saveCartElement = document.querySelector('.saveCart');
