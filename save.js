@@ -1,12 +1,13 @@
 import { cars } from './explore.js';
+let carsSave = JSON.parse(localStorage.getItem('cars'));
 
-function addHtml(cars) {
+function addHtml(carsSave) {
     let cartHtml = "";
-    if (Array.isArray(cars) && cars.length > 0) {
-        let saveCars = cars.filter(car => car.status === 'true');
+    if (Array.isArray(carsSave) && carsSave.length > 0) {
+        let saveCars = carsSave.filter(car => car.status === 'true');
         saveCars.forEach((car) => {
             cartHtml += `
-        <div class="saveCars bg-gray-300 max-lg:w-full max-sm:flex-col w-1/2 border-2 border-black rounded-md flex flex-row shadow-md shadow-gray-300 mb-4">
+        <div class="saveCar bg-gray-300 max-lg:w-full max-sm:flex-col w-1/2 border-2 border-black rounded-md flex flex-row shadow-md shadow-gray-300 mb-4">
             <img class="w-2/4 max-sm:w-screen rounded-md" src="${car.image}" alt="${car.name}">
             <div class="w-2/4 max-sm:w-screen p-4">
                 <h2 class="text-gray-900 font-bold text-2xl mb-2">${car.name} ${car.color}</h2>
@@ -25,34 +26,33 @@ function addHtml(cars) {
     const saveCartElement = document.querySelector('.saveCart');
     if (saveCartElement) {
         saveCartElement.innerHTML = cartHtml;
+        updated();
     } else {
         console.error("Element with class 'saveCart' not found.");
     }
 };
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    let cars = JSON.parse(localStorage.getItem('cars'));
-    addHtml(cars);
-
-    document.querySelector(".saveCars").addEventListener("click", function(event){
-        if(event.target.closest('.removeBtn')){
-            const btn = event.target.closest('.removeBtn');
-            const carId = btn.getAttribute('data-id');
-            const car = cars.find(car => car.id === carId);
-            if(car){
-                car.status= 'false';
-                localStorage.setItem('cars', JSON.stringify(cars));
-                addHtml(cars);
+function updated(){
+    const carElement =  document.querySelector(".saveCar");
+    if(carElement){
+    carElement.addEventListener("click", function(event) {
+            if (event.target.closest('.removeBtn')) {
+                const btn = event.target.closest('.removeBtn');
+                const carId = btn.getAttribute('data-id');
+                const car = carsSave.find(car => car.id === carId);
+                if (car) {
+                    car.status = 'false';
+                    localStorage.setItem('cars', JSON.stringify(cars));
+                    addHtml(carsSave);
+                }
             }
-        }
-    });
-    
-   
+            else if (event.target.closest(".orderBtn")){
+                alert("Order placed for " + event.target.closest('.bg-gray-300').querySelector('h2').innerText);
+            };
+    })
+    }
+    }
 
-    //     document.querySelectorAll('.orderBtn').forEach((button) => {
-    //         button.addEventListener('click', function() {
-    //             alert("Order placed for " + button.closest('.bg-gray-300').querySelector('h2').innerText);
-    //         });
-    //     });
-});
+addHtml(carsSave);
+
+updated();

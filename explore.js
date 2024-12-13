@@ -216,7 +216,7 @@ cars.forEach((car) => {
                             <span class="saveBtn cursor-pointer" data-saved="${car.id}">
                                  <i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>
                             </span>
-                            <span class="cursor-pointer">
+                            <span class="order cursor-pointer">
                                 <i class="fa-solid fa-truck fa-xl" style="color: #000000;"></i>
                             </span>
                         </div>
@@ -235,5 +235,7 @@ document.querySelector(".cars").addEventListener('click', function(event) {
          btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
          localStorage.setItem('cars', JSON.stringify(cars));
       }
+   } else if(event.target.closest(".order")){
+      alert("Order placed for " + event.target.closest('.bg-gray-200').querySelector('h2').innerText);
    }
 });
