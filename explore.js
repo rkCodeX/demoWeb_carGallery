@@ -203,8 +203,8 @@ export let cars = [
 let carsHtml = [];
 cars.forEach((car) => {
    carsHtml += `
-     <div class="container w-1/2 max-lg:w-screen max-lg:border-none h-72 max-sm:h-auto flex flex-row max-sm:flex-col border-2 border-blue0 rounded-md mb-1 shadow-md shadow-white">
-                    <img class="w-2/4  max-sm:w-screen h-70 rounded-md" src="${car.image}" alt="">
+     <div class="container w-1/2 max-lg:w-screen max-sm:h-auto flex flex-row max-sm:flex-col border-2 border-blue0 rounded-md mb-1 shadow-md shadow-white">
+                    <img class="w-2/4 max-sm:w-screen h-70 rounded-md" src="${car.image}" alt="">
                     <div class="w-2/4 max-sm:w-screen px-4 flex flex-col justify-between bg-gray-200">
                         <div>
                             <h2 class="font-bold text-2xl text-gray-800 mt-4 mb-2">${car.name} ${car.color}</h2>
