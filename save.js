@@ -26,14 +26,13 @@ function addHtml(carsSave) {
     const saveCartElement = document.querySelector('.saveCart');
     if (saveCartElement) {
         saveCartElement.innerHTML = cartHtml;
-        updated();
     } else {
         console.error("Element with class 'saveCart' not found.");
     }
 };
 
 function updated(){
-    const carElement =  document.querySelector(".saveCar");
+    const carElement =  document.querySelector(".cars");
     if(carElement){
     carElement.addEventListener("click", function(event) {
             if (event.target.closest('.removeBtn')) {
@@ -42,7 +41,8 @@ function updated(){
                 const car = carsSave.find(car => car.id === carId);
                 if (car) {
                     car.status = 'false';
-                    localStorage.setItem('cars', JSON.stringify(cars));
+                    localStorage.setItem('carsSave', JSON.stringify(carsSave));
+                    console.log(carsSave)
                     addHtml(carsSave);
                 }
             }
@@ -54,5 +54,5 @@ function updated(){
     }
 
 addHtml(carsSave);
+updated()
 
-updated();
