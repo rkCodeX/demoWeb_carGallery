@@ -1,7 +1,8 @@
 let orderCar = JSON.parse(localStorage.getItem('order'));
-console.log(orderCar)
+let hidden = true;
 let orderHtml = '';
 if (orderCar){
+    hidden = false;
     orderHtml += ` <div class="flex max-xl:flex-col max-sm:flex-col max-lg:flex-row flex-row w-auto h-auto border-2 border-gray-500 rounded-md bg-slate-400">
     <img class="w-96 max-sm:w-72 h-96 rounded-md" src="${orderCar.image}" alt="${orderCar.name}">
     <div class="w-96 max-sm:w-72 h-96 flex flex-col gap-2 px-6 py-4 bg-slate-400">
@@ -17,3 +18,15 @@ if (orderCar){
 }
 
 document.querySelector('.orderItem').innerHTML = orderHtml;
+
+document.querySelector('.cancelBtn').addEventListener('click', function(event) {
+    localStorage.removeItem('order');
+    hidden = true;
+    window.location.reload();
+});
+
+if(hidden){
+document.querySelector('.progress').style.display = 'none';
+}else{
+    document.querySelector('.progress').style.display = 'block';
+}
