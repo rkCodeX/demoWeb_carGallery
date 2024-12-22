@@ -16,7 +16,7 @@ function showNav(){
 
 window.showNav = showNav;
 
-export let cars = [
+let cars = [
    {
       status: 'false',
       id: '01',
@@ -216,14 +216,13 @@ cars.forEach((car) => {
                             <span class="saveBtn cursor-pointer" data-saved="${car.id}">
                                  <i class="fa-regular fa-bookmark fa-xl" style="color: #000000;"></i>
                             </span>
-                            <span class="order cursor-pointer">
+                            <span class="order cursor-pointer" data-saved="${car.id}">
                                 <i class="fa-solid fa-truck fa-xl" style="color: #000000;"></i>
                             </span>
                         </div>
                     </div>
                 </div>`
 });
-
 document.querySelector(".cars").innerHTML = carsHtml;
 document.querySelector(".cars").addEventListener('click', function(event) {
    if (event.target.closest('.saveBtn')) {
@@ -237,5 +236,9 @@ document.querySelector(".cars").addEventListener('click', function(event) {
       }
    } else if(event.target.closest(".order")){
       alert("Order placed for " + event.target.closest('.bg-gray-200').querySelector('h2').innerText);
+                let btn = event.target.closest('.order');
+                let orderId = btn.getAttribute('data-saved');
+                let orderCar = cars.find(car => car.id === orderId);
+                localStorage.setItem('order', JSON.stringify(orderCar));
    }
 });

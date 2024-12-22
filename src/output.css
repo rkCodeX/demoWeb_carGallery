@@ -705,6 +705,10 @@ video {
   height: 6rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .h-40 {
   height: 10rem;
 }
@@ -715,6 +719,10 @@ video {
 
 .h-8 {
   height: 2rem;
+}
+
+.h-96 {
+  height: 24rem;
 }
 
 .h-auto {
@@ -767,6 +775,11 @@ video {
 
 .w-auto {
   width: auto;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .w-full {
@@ -927,6 +940,11 @@ video {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
 .border-x-gray-300 {
   --tw-border-opacity: 1;
   border-left-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -992,6 +1010,11 @@ video {
 .bg-gray-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -1227,9 +1250,19 @@ video {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
+}
+
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .text-red-700 {
@@ -1375,6 +1408,10 @@ video {
   .max-xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  .max-xl\:flex-col {
+    flex-direction: column;
+  }
 }
 
 @media not all and (min-width: 1024px) {
@@ -1404,6 +1441,14 @@ video {
 
   .max-lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .max-lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .max-lg\:flex-col {
+    flex-direction: column;
   }
 }
 
@@ -1444,12 +1489,36 @@ video {
     height: auto;
   }
 
+  .max-sm\:h-2 {
+    height: 0.5rem;
+  }
+
+  .max-sm\:w-60 {
+    width: 15rem;
+  }
+
   .max-sm\:w-72 {
     width: 18rem;
   }
 
   .max-sm\:w-screen {
     width: 100vw;
+  }
+
+  .max-sm\:w-0 {
+    width: 0px;
+  }
+
+  .max-sm\:w-7 {
+    width: 1.75rem;
+  }
+
+  .max-sm\:w-64 {
+    width: 16rem;
+  }
+
+  .max-sm\:w-6 {
+    width: 1.5rem;
   }
 
   .max-sm\:grid-cols-2 {
@@ -1477,5 +1546,10 @@ video {
   .max-sm\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .max-sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }

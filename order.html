@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="./src/output.css">
     <script src="https://kit.fontawesome.com/324d50e246.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    
+<body class="bg-blue0 p-0 m-0">
+    <h1 class="text-red-700 m-2">Reminder: You can place only one order at a time.</h1>
+    <div class="flex max-lg:flex-col flex-row w-full items-center justify-evenly mt-4">
+        <div class="w-96 max-sm:w-72">
+        <h1 class="text-green-700 text-3xl max-sm:text-xl mt-4 mb-8">Order in progress</h1>
+        <div class="bg-blue-700 max-sm:w-72 max-sm:h-2 w-90 h-4 rounded-full"></div>
+        </div>  
+        <div class="orderItem w-fit h-auto max-lg:mt-6">
+        </div>
+    </div>
+    <script type="module" src="order.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
-import { cars } from './explore.js';
 let carsSave = JSON.parse(localStorage.getItem('cars'));
+let saveCars = carsSave.filter(car => car.status === 'true');
 
-function addHtml(carsSave) {
+function addHtml(saveCars) {
     let cartHtml = "";
-    if (Array.isArray(carsSave) && carsSave.length > 0) {
-        let saveCars = carsSave.filter(car => car.status === 'true');
+    if (Array.isArray(saveCars) && saveCars.length > 0) {
+        saveCars = carsSave.filter(car => car.status === 'true')
         saveCars.forEach((car) => {
             cartHtml += `
         <div class="saveCar bg-gray-300 max-lg:w-full max-sm:flex-col w-1/2 border-2 border-black rounded-md flex flex-row shadow-md shadow-gray-300 mb-4">
@@ -15,7 +15,7 @@ function addHtml(carsSave) {
                 <p class="text-gray-500 text-sm text-wrap">${car.description}</p>
                 <p class="text-gray-600 text-md mt-2">$${car.price}</p>
                 <button class="removeBtn text-blue-800 mr-2 my-2 hover:text-red-700" data-id="${car.id}">remove</button>
-                <button class="orderBtn text-blue-800 m-2 hover:text-red-700">order</button>
+                <button class="orderBtn text-blue-800 m-2 hover:text-red-700" data-id="${car.id}">order</button>
             </div> 
         </div>`;
         });
@@ -31,28 +31,33 @@ function addHtml(carsSave) {
     }
 };
 
-function updated(){
-    const carElement =  document.querySelector(".cars");
-    if(carElement){
-    carElement.addEventListener("click", function(event) {
+function updated() {
+    const carElement = document.querySelector(".cars");
+    if (carElement) {
+        carElement.addEventListener("click", function (event) {
+    
             if (event.target.closest('.removeBtn')) {
-                const btn = event.target.closest('.removeBtn');
-                const carId = btn.getAttribute('data-id');
-                const car = carsSave.find(car => car.id === carId);
+                let btn = event.target.closest('.removeBtn');
+                let carId = btn.getAttribute('data-id');
+                let car = carsSave.find(car => car.id === carId);
                 if (car) {
                     car.status = 'false';
-                    localStorage.setItem('carsSave', JSON.stringify(carsSave));
-                    console.log(carsSave)
-                    addHtml(carsSave);
+                    localStorage.setItem('cars', JSON.stringify(carsSave));
+                    addHtml(saveCars);
                 }
+                location.reload()
             }
-            else if (event.target.closest(".orderBtn")){
+            else if (event.target.closest(".orderBtn")) {
                 alert("Order placed for " + event.target.closest('.bg-gray-300').querySelector('h2').innerText);
+                let btn = event.target.closest('.orderBtn');
+                let orderId = btn.getAttribute('data-id');
+                let orderCar = carsSave.find(car => car.id === orderId);
+                localStorage.setItem('order', JSON.stringify(orderCar));
             };
-    })
+        })
     }
-    }
+}
 
-addHtml(carsSave);
+addHtml(saveCars)
 updated()
-
+document.querySelector('.number').innerHTML = `Items (<span class="text-xl">${saveCars.length}</span>)`;
