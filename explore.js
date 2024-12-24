@@ -223,22 +223,45 @@ cars.forEach((car) => {
                     </div>
                 </div>`
 });
-document.querySelector(".cars").innerHTML = carsHtml;
-document.querySelector(".cars").addEventListener('click', function(event) {
-   if (event.target.closest('.saveBtn')) {
-      const btn = event.target.closest('.saveBtn');
+
+let cart = document.querySelector(".cars");
+cart.innerHTML = carsHtml;
+
+function toSave(event){
+   const btn = event.target.closest('.saveBtn');
       const carId = btn.getAttribute('data-saved');
       const car = cars.find(car => car.id === carId);
       if (car) {
          car.status = 'true';
          btn.innerHTML = `<i class="fa-solid fa-bookmark fa-xl" style="color: #1f55b2;"></i>`;
          localStorage.setItem('cars', JSON.stringify(cars));
-      }
+      };
+}
+let order = false;
+
+function toOrder(event){
+   order = true;
+   alert("Order placed for " + event.target.closest('.bg-gray-200').querySelector('h2').innerText);
+   let btn = event.target.closest('.order');
+   let orderId = btn.getAttribute('data-saved');
+   let orderCar = cars.find(car => car.id === orderId);
+   localStorage.setItem('order', JSON.stringify(orderCar));
+}
+cart.addEventListener('click', function(event) {
+   if (event.target.closest('.saveBtn')) {
+      toSave(event);
    } else if(event.target.closest(".order")){
-      alert("Order placed for " + event.target.closest('.bg-gray-200').querySelector('h2').innerText);
-                let btn = event.target.closest('.order');
-                let orderId = btn.getAttribute('data-saved');
-                let orderCar = cars.find(car => car.id === orderId);
-                localStorage.setItem('order', JSON.stringify(orderCar));
+      if(order === false){
+         toOrder(event);
+      }else{
+         let btn = event.target.closest('.order');
+         let orderId = btn.getAttribute('data-saved');
+         let state = JSON.parse(localStorage.getItem('order'));
+         if(state && state.id === orderId){
+            alert("Order already placed for " + event.target.closest('.bg-gray-200').querySelector('h2').innerText);
+         }else{
+            alert('Wait for previous order to complete!');
+         }
+      }
    }
 });
