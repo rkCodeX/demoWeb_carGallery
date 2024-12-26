@@ -2,8 +2,9 @@ let name = localStorage.getItem('name');
 let number = localStorage.getItem('number');
 let email = localStorage.getItem('email');
 let saves = JSON.parse(localStorage.getItem('cars'));
+let order = JSON.parse(localStorage.getItem('order'));
 let saveHtml = "";
-
+let orderHtml = "";
 function saveItems() {
     if (Array.isArray(saves) && saves.length > 0) {
         saves = saves.filter(car => car.status === 'true');
@@ -32,7 +33,24 @@ function saveItems() {
     document.querySelector('.saveList').innerHTML = saveHtml; 
 }
 
+function orderItems() {
 
+    if (order) {
+        orderHtml = `
+        <div class="flex flex-row bg-blue2 border-2 border-gray-500 rounded-md">
+        <img class="w-72 h-70 border-2 border-gray-600 rounded-sm" src="${order.image}">
+        <div class="flex flex-col gap-2 p-4">
+        <h2 class="text-gray-300 font-bold text-2xl mb-2">${order.name} ${order.color}</h2>
+                <h2 class="text-gray-300 text-xl mb-2">${order.model} ${order.year}</h2>
+                <p class="text-gray-300 text-sm text-wrap">${order.description}</p>
+                <p class="text-red-500 text-md mt-2">$${order.price}</p>
+        </div>
+        `
+    } else {
+        orderHtml = `<h1 class="text-sm text-red-700">Sorry! No order found yet</h1>`;
+    }
+    document.querySelector('.orderList').innerHTML = orderHtml; 
+}
 
 let profile = document.querySelector('.profile');
 
@@ -43,7 +61,7 @@ let profileHtml = `
         <h2 class="pl-2 text-xl border-b-2 border-b-blue0 bg-gray-300">${email}</h2>
     <div>
         <h2 class="pl-2 text-xl border-b-2 border-b-blue0 bg-gray-300">Your order</h2>
-        <h1 class="text-sm text-red-700">Sorry! No order found yet</h1>
+        <div class="orderList"></div>
     </div>
     <div>
         <h2 class="text-xl pl-2 border-b-2 border-b-blue0 bg-gray-300">Save Items</h2>
@@ -56,3 +74,4 @@ let profileHtml = `
 
 profile.innerHTML = profileHtml;
 saveItems();
+orderItems();
