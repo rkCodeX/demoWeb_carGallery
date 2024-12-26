@@ -31,6 +31,8 @@ function addHtml(saveCars) {
     }
 };
 
+let order = false;
+
 function updated() {
     const carElement = document.querySelector(".cars");
     if (carElement) {
@@ -48,11 +50,23 @@ function updated() {
                 location.reload()
             }
             else if (event.target.closest(".orderBtn")) {
+                if(order === false){
+                order = true;
                 alert("Order placed for " + event.target.closest('.bg-gray-300').querySelector('h2').innerText);
                 let btn = event.target.closest('.orderBtn');
                 let orderId = btn.getAttribute('data-id');
                 let orderCar = carsSave.find(car => car.id === orderId);
                 localStorage.setItem('order', JSON.stringify(orderCar));
+                }else{
+                    let btn = event.target.closest('.orderBtn');
+                    let orderId = btn.getAttribute('data-id');
+                    let state = JSON.parse(localStorage.getItem('order'));
+                    if(state && state.id === orderId){
+                     alert("Order already placed for " + event.target.closest('.bg-gray-300').querySelector('h2').innerText);
+                    }else{
+                        alert('Wait for previous order to complete!');
+                    }
+                }
             };
         })
     }
