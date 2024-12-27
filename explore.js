@@ -238,6 +238,7 @@ function toSave(event){
       };
 }
 let order = false;
+let register = localStorage.getItem('register');
 
 function toOrder(event){
    order = true;
@@ -249,8 +250,13 @@ function toOrder(event){
 }
 cart.addEventListener('click', function(event) {
    if (event.target.closest('.saveBtn')) {
+      if(register === 'true'){
       toSave(event);
+      }else{
+         alert('Please register or login to save your favorite cars!');
+      }
    } else if(event.target.closest(".order")){
+      if(register === 'true'){
       if(order === false){
          toOrder(event);
       }else{
@@ -263,5 +269,8 @@ cart.addEventListener('click', function(event) {
             alert('Wait for previous order to complete!');
          }
       }
+   }else{
+      alert('Please register or login to order your favorite cars!');
    }
+}
 });

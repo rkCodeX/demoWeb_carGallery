@@ -1,10 +1,14 @@
-let carsSave = JSON.parse(localStorage.getItem('cars'));
-let saveCars = '';
+let register = localStorage.getItem('register');
 
-function addHtml(saveCars) {
+let carsSave = JSON.parse(localStorage.getItem('cars'));
+let items = 0;
+
+function addHtml(carsSave) {
+   let saveCars = carsSave.filter(car => car.status === 'true');
+   items = saveCars.length;
     let cartHtml = "";
-    if (Array.isArray(saveCars) && saveCars.length > 0) {
-        saveCars = carsSave.filter(car => car.status === 'true')
+    if (Array.isArray(saveCars) && saveCars.length > 0 && register === 'true') {
+        saveCars = carsSave.filter(car => car.status === 'true');
         saveCars.forEach((car) => {
             cartHtml += `
         <div class="saveCar bg-gray-300 max-lg:w-full max-sm:flex-col w-1/2 border-2 border-black rounded-md flex flex-row shadow-md shadow-gray-300 mb-4">
@@ -72,6 +76,6 @@ function updated() {
     }
 }
 
-addHtml(saveCars)
+addHtml(carsSave)
 updated()
-document.querySelector('.number').innerHTML = `Items (<span class="text-xl">${saveCars.length}</span>)`;
+document.querySelector('.number').innerHTML = `Items (<span class="text-xl">${items}</span>)`;

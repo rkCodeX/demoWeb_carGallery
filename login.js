@@ -10,6 +10,7 @@ submitBtn.addEventListener("click", function(){
     if(email.value === userEmail && pass.value === passCode){
         localStorage.setItem('register', true);
         alert('login successfully.');
+        window.location.href = 'explore.html';
     }else{
         alert('Account does not exist.');
     }

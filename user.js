@@ -54,7 +54,6 @@ function orderItems() {
 }
 
 let profile = document.querySelector('.profile');
-
 let register = localStorage.getItem('register');
 let profileHtml = '';
 
@@ -91,6 +90,7 @@ deleteAccount.addEventListener('click', ()=>{
     localStorage.setItem('register', false);
     user(); 
     location.reload()
+    window.location.href = 'explore.html';
 })
 saveItems();
 orderItems();

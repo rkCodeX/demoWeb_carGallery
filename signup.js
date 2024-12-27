@@ -25,6 +25,7 @@ submitBtn.addEventListener('click', function(){
         clear();
         agree();
         localStorage.setItem('register', true);
+        window.location.href = 'explore.html';
     }
 })
 
