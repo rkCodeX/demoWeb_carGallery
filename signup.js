@@ -21,8 +21,10 @@ submitBtn.addEventListener('click', function(){
         localStorage.setItem('name', name.value);
         localStorage.setItem('number', number.value);
         localStorage.setItem('email', email.value);
+        localStorage.setItem('password', code.value);
         clear();
         agree();
+        localStorage.setItem('register', true);
     }
 })
 

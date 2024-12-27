@@ -1,5 +1,5 @@
 let carsSave = JSON.parse(localStorage.getItem('cars'));
-let saveCars = carsSave.filter(car => car.status === 'true');
+let saveCars = '';
 
 function addHtml(saveCars) {
     let cartHtml = "";
