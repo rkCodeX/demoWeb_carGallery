@@ -5,7 +5,7 @@ let code = document.querySelector('.code');
 let check = document.querySelector('.checkbtn');
 let submitBtn = document.querySelector('.submit');
 let checkBtn = false;
-
+//checking checkbox
 check.addEventListener('click',()=>checkBtn = true);
 function agree(){
 if(checkBtn){
@@ -14,7 +14,7 @@ if(checkBtn){
     check.checked = false;
 }
 }
-
+//register user
 submitBtn.addEventListener('click', function(){
     let permission = checkValidity();
     if(permission){
@@ -28,7 +28,7 @@ submitBtn.addEventListener('click', function(){
         window.location.href = 'explore.html';
     }
 })
-
+//check validity for user
 function checkValidity(){
     let nameValue = name.value;
     let numberValue = number.value;
@@ -43,6 +43,7 @@ function checkValidity(){
         return false;
     }
 }
+//clear registration form
 function clear(){
     name.value = '';
     number.value = '';

@@ -2,6 +2,7 @@ let orderCar = JSON.parse(localStorage.getItem('order'));
 let hidden = true;
 let register = localStorage.getItem('register');
 let orderHtml = '';
+//adding order items html
 if (orderCar && register === 'true'){
     hidden = false;
     orderHtml += ` <div class="flex max-xl:flex-col max-sm:flex-col max-lg:flex-row flex-row w-auto h-auto border-2 border-gray-500 rounded-md bg-slate-400">
@@ -17,16 +18,15 @@ if (orderCar && register === 'true'){
 } else {
     orderHtml = `<p class="text-red-500 text-2xl p-20">No cars ordered yet.</p>`;
 }
-
 document.querySelector('.orderItem').innerHTML = orderHtml;
-
+//cancel order item button
 document.querySelector('.cancelBtn').addEventListener('click', function(event) {
     localStorage.removeItem('order');
     hidden = true;
     window.location.reload();
     window.location.href = 'explore.html';
 });
-
+//order progress bar
 if(hidden){
 document.querySelector('.progress').style.display = 'none';
 }else{

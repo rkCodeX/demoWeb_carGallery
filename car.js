@@ -1,3 +1,4 @@
+//auto slide show
 let slide = document.getElementsByClassName("slides");
 let slideIndex = 0;
 slides();
@@ -12,7 +13,7 @@ function slides(){
     slide[slideIndex-1].style.display = 'block';
     setTimeout(slides, 5000);
 }
-
+//show and hide navbar
 let nav = document.getElementsByClassName('nav')[0];
 let navBtn = document.getElementsByClassName('navBtn')[0];
 

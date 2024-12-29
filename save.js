@@ -1,8 +1,7 @@
 let register = localStorage.getItem('register');
-
 let carsSave = JSON.parse(localStorage.getItem('cars'));
 let items = 0;
-
+//adding html to saved cars
 function addHtml(carsSave) {
    let saveCars = carsSave.filter(car => car.status === 'true');
    items = saveCars.length;
@@ -26,7 +25,6 @@ function addHtml(carsSave) {
     } else {
         cartHtml = `<p class="text-red-500 text-2xl p-20">No cars available in cart.</p>`;
     }
-
     const saveCartElement = document.querySelector('.saveCart');
     if (saveCartElement) {
         saveCartElement.innerHTML = cartHtml;
@@ -36,12 +34,12 @@ function addHtml(carsSave) {
 };
 
 let order = false;
-
+//updating save cars
 function updated() {
     const carElement = document.querySelector(".cars");
     if (carElement) {
         carElement.addEventListener("click", function (event) {
-    
+    //removing saved car
             if (event.target.closest('.removeBtn')) {
                 let btn = event.target.closest('.removeBtn');
                 let carId = btn.getAttribute('data-id');
@@ -53,6 +51,7 @@ function updated() {
                 }
                 location.reload()
             }
+            //place order for saved car
             else if (event.target.closest(".orderBtn")) {
                 if(order === false){
                 order = true;
@@ -75,7 +74,7 @@ function updated() {
         })
     }
 }
-
 addHtml(carsSave)
 updated()
+//total saved cars
 document.querySelector('.number').innerHTML = `Items (<span class="text-xl">${items}</span>)`;

@@ -1,5 +1,5 @@
+//show and hide navbar
 let view = false;
-
 function showNav(){
    let box = document.querySelector(".drop");
    let Nav = document.querySelector(".btn");
@@ -13,9 +13,8 @@ function showNav(){
       box.style.display = "block";
    }
 }
-
 window.showNav = showNav;
-
+//array of all cars
 let cars = [
    {
       status: 'false',
@@ -199,7 +198,7 @@ let cars = [
       price: 100000
    }
 ];
-
+//adding html to all cars ion array
 let carsHtml = [];
 cars.forEach((car) => {
    carsHtml += `
@@ -223,10 +222,9 @@ cars.forEach((car) => {
                     </div>
                 </div>`
 });
-
 let cart = document.querySelector(".cars");
 cart.innerHTML = carsHtml;
-
+//function to save car
 function toSave(event){
    const btn = event.target.closest('.saveBtn');
       const carId = btn.getAttribute('data-saved');
@@ -239,7 +237,7 @@ function toSave(event){
 }
 let order = false;
 let register = localStorage.getItem('register');
-
+//function to order a car
 function toOrder(event){
    order = true;
    alert("Order placed for " + event.target.closest('.bg-gray-200').querySelector('h2').innerText);
@@ -249,6 +247,7 @@ function toOrder(event){
    localStorage.setItem('order', JSON.stringify(orderCar));
 }
 cart.addEventListener('click', function(event) {
+   //save car 
    if (event.target.closest('.saveBtn')) {
       if(register === 'true'){
       toSave(event);
@@ -260,6 +259,7 @@ cart.addEventListener('click', function(event) {
       if(order === false){
          toOrder(event);
       }else{
+         //order car
          let btn = event.target.closest('.order');
          let orderId = btn.getAttribute('data-saved');
          let state = JSON.parse(localStorage.getItem('order'));
