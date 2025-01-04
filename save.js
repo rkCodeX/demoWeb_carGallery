@@ -49,7 +49,7 @@ function updated() {
                 if (car) {
                     car.status = 'false';
                     localStorage.setItem('cars', JSON.stringify(carsSave));
-                    addHtml(saveCars);
+                    addHtml(carsSave);
                 }
                 location.reload()
             }
