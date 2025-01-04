@@ -5,7 +5,7 @@ console.log(passCode);
 let email = document.querySelector('.email');
 let pass = document.querySelector('.pass');
 let submitBtn = document.querySelector('.submit');
-
+//event listener on submit button
 submitBtn.addEventListener("click", function(){
     if(email.value === userEmail && pass.value === passCode){
         localStorage.setItem('register', true);

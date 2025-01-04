@@ -4,7 +4,7 @@ let email = localStorage.getItem('email');
 let saves = JSON.parse(localStorage.getItem('cars'));
 let order = JSON.parse(localStorage.getItem('order'));
 let saveHtml = "";
-
+//saved items of user
 function saveItems() {
     if (Array.isArray(saves) && saves.length > 0) {
         saves = saves.filter(car => car.status === 'true');
@@ -33,7 +33,7 @@ function saveItems() {
     document.querySelector('.saveList').innerHTML = saveHtml; 
 }
 let orderHtml = "";
-
+//order item of user
 function orderItems() {
     if (order) {
         orderHtml = `
@@ -52,11 +52,10 @@ function orderItems() {
     }
     document.querySelector('.orderList').innerHTML = orderHtml; 
 }
-
 let profile = document.querySelector('.profile');
 let register = localStorage.getItem('register');
 let profileHtml = '';
-
+//adding html for user profile
 function user(){
 if(register === 'true'){
     profileHtml = `
@@ -81,9 +80,8 @@ if(register === 'true'){
 }
 profile.innerHTML = profileHtml;
 };
-
 user();
-
+//delete account button
 if(register === 'true'){
 let deleteAccount = document.querySelector('.cancelBtn');
 deleteAccount.addEventListener('click', ()=>{
